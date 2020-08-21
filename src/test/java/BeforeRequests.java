@@ -13,14 +13,12 @@ public class BeforeRequests {
 
     @BeforeTest
     static void setUp() {
-        String response = given().spec(requestSpec)
+        Response response = given().spec(requestSpec)
                     .when()
                     .body(Bodies.getRequestTokenBody())
-                    .post(EndPoints.TOKEN)
-                    .then()
-                    .log().all()
-                    .extract().response().asString();
-        //String token = Parser.getToken(response);
-       // requestSpec.header("x-xapp-token", token);
+                    .post(EndPoints.TOKEN);
+//dd
+        String token = Parser.getToken(response);
+        requestSpec.header("x-xapp-token", token);
     }
 }
