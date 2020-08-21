@@ -15,8 +15,9 @@ public class TestRequests extends BeforeRequests{
 
     private String artist = "Richard+Mayhew";
     private String artistID;
+    private String artworkID;
 
-    //
+    //Step1 - Search for Artist
     @Test
     public void searchArtistTest(){
         Response response = given()
@@ -26,11 +27,15 @@ public class TestRequests extends BeforeRequests{
                 .when()
                 .get(EndPoints.SEARCH+artist);
 
-        String authorID =  Parser.getAuthorIDFromSearch(response);
-        System.out.println(authorID);
+        Assert.assertNotEquals(Parser.getTotalCountFromSearch(response), 0);
+        artistID =  Parser.getAuthorIDFromSearch(response);
+        artworkID=Parser.getArtworkIDFromSearch(response);
+
+        System.out.println(artworkID);
     }
 
-    @Test
+    //Step2 - Get the Artist by ID + check the name
+    @Test(dependsOnMethods={"searchArtistTest"})
     public void getArtistTest(){
         Response response = given()
                 .spec(requestSpec)
@@ -39,5 +44,19 @@ public class TestRequests extends BeforeRequests{
                 .when()
                 .get(EndPoints.ARTISTS+artistID);
 
+        Assert.assertEquals(Parser.getNameFromGetArtist(response), Parser.returnName(artist));
     }
+
+   /* //Step3 - Get the Artist by ID + check the name
+    @Test(dependsOnMethods={"searchArtistTest"})
+    public void getArtistWorksTest(){
+        Response response = given()
+                .spec(requestSpec)
+                .expect().spec(responseSpec)
+                .log().all()
+                .when()
+                .get(EndPoints.ARTISTS+artistID);
+
+        Assert.assertEquals(Parser.getNameFromGetArtist(response), "Richard Mayhew, Transgression (2008)");
+    }*/
 }
