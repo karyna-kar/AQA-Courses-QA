@@ -17,4 +17,22 @@ public class Parser {
     {
         return new JsonParser().parse(response.getBody().asString()).getAsJsonObject();
     }
+
+    public static String getLinkFromSearch(Response response)
+    {
+        String link = getJsonObjectFromResponse(response)
+                .get("_embedded").getAsJsonObject()
+                .get("results").getAsJsonArray()
+                .get(0).getAsJsonObject()
+                .get("_links").getAsJsonObject()
+                .get("self").getAsJsonObject()
+                .get("href").getAsString();
+        return link;
+    }
+
+    public static String getAuthorIDFromSearch(Response response)
+    {
+        String link =  getLinkFromSearch (response);
+        return link;
+    }
 }
