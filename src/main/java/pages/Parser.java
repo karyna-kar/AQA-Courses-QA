@@ -5,6 +5,9 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import io.restassured.response.Response;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Parser {
 
 
@@ -45,12 +48,23 @@ public class Parser {
         String  artwork = getJsonObjectFromResponse(response)
                 .get("_embedded").getAsJsonObject()
                 .get("results").getAsJsonArray()
-                .get(2).getAsJsonObject()
+                .get(1).getAsJsonObject()
                 .get("_links").getAsJsonObject()
                 .get("self").getAsJsonObject()
                 .get("href").getAsString();
 
         return artwork;
+    }
+
+    public static String getArtworkTitleFromSearch(Response response)
+    {
+        String  title = getJsonObjectFromResponse(response)
+                .get("_embedded").getAsJsonObject()
+                .get("artworks").getAsJsonArray()
+                .get(0).getAsJsonObject()
+                .get("title").getAsString();
+
+        return title;
     }
 
     public static String getAuthorIDFromSearch(Response response)
@@ -60,11 +74,15 @@ public class Parser {
         return parts[5];
     }
 
-    public static String getArtworkIDFromSearch(Response response)
+    public static String getArtworkID(Response response)
     {
-        String link =  getArtworkLinkFromSearch (response);
-        String[] parts = link.split("/");
-        return parts[5];
+        String artworkID = getJsonObjectFromResponse(response)
+                .get("_embedded").getAsJsonObject()
+                .get("artworks").getAsJsonArray()
+                .get(0).getAsJsonObject()
+                .get("id").getAsString();
+
+        return artworkID;
     }
 
     public static String getNameFromGetArtist(Response response)
@@ -74,9 +92,18 @@ public class Parser {
         return name;
     }
 
-    public static String returnName(String defaultName)
+    public static Integer getNumberOfGenes(Response response)
     {
-        String[] parts = defaultName.split("\\+");
-        return parts[0]+" "+parts[1];
+        int  size = getJsonObjectFromResponse(response)
+                .get("_embedded").getAsJsonObject()
+                .get("genes").getAsJsonArray().size();
+        return size;
+    }
+    public static ArrayList<String> getArtworkDates(Response response)
+    {
+        ArrayList<String> actualTimes = new ArrayList<String>();
+        actualTimes.add(getJsonObjectFromResponse(response).get("created_at").getAsString());
+        actualTimes.add(getJsonObjectFromResponse(response).get("updated_at").getAsString());
+        return actualTimes;
     }
 }
