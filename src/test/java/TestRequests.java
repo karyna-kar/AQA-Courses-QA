@@ -36,7 +36,7 @@ public class TestRequests extends BeforeRequests{
                 .expect().spec(responseSpec)
                 .log().all()
                 .when()
-                .get(EndPoints.ARTISTS+artistID);
+                .get(EndPoints.ARTISTS+"/"+artistID);
 
         Assert.assertEquals(Parser.getNameFromGetArtist(response), "Gustav Klimt");
     }

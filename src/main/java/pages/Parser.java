@@ -20,14 +20,12 @@ public class Parser {
     public static JsonObject getJsonObjectFromResponse(Response response)
     {
         return new JsonParser().parse(response.getBody().asString()).getAsJsonObject();
-
     }
 
     public static Integer getTotalCountFromSearch(Response response)
     {
         int count = getJsonObjectFromResponse(response)
                 .get("total_count").getAsInt();
-
         return count;
     }
 
@@ -52,7 +50,6 @@ public class Parser {
                 .get("_links").getAsJsonObject()
                 .get("self").getAsJsonObject()
                 .get("href").getAsString();
-
         return artwork;
     }
 
@@ -63,7 +60,6 @@ public class Parser {
                 .get("artworks").getAsJsonArray()
                 .get(0).getAsJsonObject()
                 .get("title").getAsString();
-
         return title;
     }
 
@@ -81,7 +77,6 @@ public class Parser {
                 .get("artworks").getAsJsonArray()
                 .get(0).getAsJsonObject()
                 .get("id").getAsString();
-
         return artworkID;
     }
 

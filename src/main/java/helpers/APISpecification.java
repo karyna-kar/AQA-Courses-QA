@@ -16,13 +16,9 @@ public class APISpecification {
                 .build();
     }
 
-
     public static ResponseSpecification getResponseSpecification() {
         return new ResponseSpecBuilder()
                 .expectStatusCode(200)
                 .build();
-
     }
-
-
 }
