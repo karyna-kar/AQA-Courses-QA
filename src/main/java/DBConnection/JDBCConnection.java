@@ -19,13 +19,13 @@ public class JDBCConnection {
     private static Statement statement = null;
 
     public static Connection connectToDB()  {
-        Logs.info("Try to establish DB connection...");
+        Logs.info("Establishing DB connection...");
         try {
             connection = DriverManager.getConnection(connectionUrl);
-            Logs.info("Connection to DB is successful!");
+            Logs.info("DB connection is successful");
         }
         catch(SQLException e){
-            Logs.info("Connection to DB is failed!");
+            Logs.info("DB connection is failed");
             Logs.error(e.getMessage());
         }
         return connection;
@@ -35,7 +35,7 @@ public class JDBCConnection {
         if (connection != null)
         { try {
             connection.close();
-            Logs.info("Connection to DB is closed!");
+            Logs.info("DB connection is closed");
         }
         catch(SQLException e)
         {
@@ -45,13 +45,25 @@ public class JDBCConnection {
     }
 
     public static ResultSet selectFromDB(String query) {
-
         try {
-            Statement stmt = connectToDB().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            result = stmt.executeQuery(query);
+            statement = connectToDB().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            Logs.info("Executing Select statement:" + query);
+            result = statement.executeQuery(query);
+            Logs.info("Data is retrieved");
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            Logs.error(e.getMessage());
         }
         return result;
+    }
+
+    public static void updateInDB(String query) {
+        try {
+            statement = connectToDB().createStatement();
+            Logs.info("Executing Update statement:" + query);
+            statement.executeUpdate(query);
+            Logs.info("Data is updated");
+        } catch (SQLException e) {
+            Logs.error(e.getMessage());
+        }
     }
 }

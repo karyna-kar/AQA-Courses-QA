@@ -79,3 +79,122 @@
 2020-08-28 17:14:00 INFO  Logs:13 - Connection to DB is closed!
 2020-08-28 17:14:00 INFO  Logs:13 - Connection to DB is closed!
 2020-08-28 17:14:00 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:20:37 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:20:37 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 17:21:37 INFO  Logs:13 - DB connection is failed
+2020-08-28 17:21:37 ERROR Logs:9 - The TCP/IP connection to the host 172.31.0.150, port 1435 has failed. Error: "connect timed out. Verify the connection properties. Make sure that an instance of SQL Server is running on the host and accepting TCP/IP connections at the port. Make sure that TCP connections to the port are not blocked by a firewall.".
+2020-08-28 17:21:37 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:26:38 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:26:38 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 17:26:38 INFO  Logs:13 - DB connection is successful
+2020-08-28 17:26:38 INFO  Logs:13 - DB connection is closed
+2020-08-28 17:26:38 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:26:38 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:26:38 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 17:26:39 INFO  Logs:13 - DB connection is successful
+2020-08-28 17:26:39 INFO  Logs:13 - DB connection is closed
+2020-08-28 17:26:39 INFO  Logs:13 - DB connection is closed
+2020-08-28 17:26:39 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:37:32 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:37:32 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 17:37:32 INFO  Logs:13 - DB connection is successful
+2020-08-28 17:37:32 INFO  Logs:13 - DB connection is closed
+2020-08-28 17:37:32 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:37:32 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:37:32 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = 1
+2020-08-28 17:37:32 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 17:37:32 INFO  Logs:13 - DB connection is successful
+2020-08-28 17:37:33 INFO  Logs:13 - Data is retrieved
+2020-08-28 17:37:33 INFO  Logs:13 - DB connection is closed
+2020-08-28 17:37:33 INFO  Logs:13 - DB connection is closed
+2020-08-28 17:37:33 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:49:45 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:49:45 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 17:49:45 INFO  Logs:13 - DB connection is successful
+2020-08-28 17:49:45 INFO  Logs:13 - DB connection is closed
+2020-08-28 17:49:45 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:49:45 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:49:45 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = 1
+2020-08-28 17:49:45 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 17:49:45 INFO  Logs:13 - DB connection is successful
+2020-08-28 17:49:46 INFO  Logs:13 - Data is retrieved
+2020-08-28 17:49:46 INFO  Logs:13 - DB connection is closed
+2020-08-28 17:49:46 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:49:46 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:49:46 INFO  Logs:13 - Executing Update statement:Update [WorldEvents].[dbo].[tblEvent] set EventName = 'Attack on Pearl Harbor' where EventID = 2
+2020-08-28 17:49:46 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 17:49:46 INFO  Logs:13 - DB connection is successful
+2020-08-28 17:49:46 ERROR Logs:9 - The statement did not return a result set.
+2020-08-28 17:49:46 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = 2
+2020-08-28 17:49:46 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 17:49:46 INFO  Logs:13 - DB connection is successful
+2020-08-28 17:49:46 INFO  Logs:13 - Data is retrieved
+2020-08-28 17:49:46 INFO  Logs:13 - DB connection is closed
+2020-08-28 17:49:46 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:50:23 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:50:23 INFO  Logs:13 - Executing Update statement:Update [WorldEvents].[dbo].[tblEvent] set EventName = 'Test' where EventID = 2
+2020-08-28 17:50:23 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 17:50:24 INFO  Logs:13 - DB connection is successful
+2020-08-28 17:50:24 ERROR Logs:9 - The statement did not return a result set.
+2020-08-28 17:50:24 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = 2
+2020-08-28 17:50:24 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 17:50:24 INFO  Logs:13 - DB connection is successful
+2020-08-28 17:50:24 INFO  Logs:13 - Data is retrieved
+2020-08-28 17:50:24 INFO  Logs:13 - DB connection is closed
+2020-08-28 17:50:24 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 18:24:01 INFO  Logs:13 - ------- Started test -------
+2020-08-28 18:24:01 INFO  Logs:13 - Executing Update statement:Update [WorldEvents].[dbo].[tblEvent] set EventName = 'Test' where EventID = 2
+2020-08-28 18:24:01 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 18:24:24 INFO  Logs:13 - DB connection is successful
+2020-08-28 18:24:25 INFO  Logs:13 - Data is updated
+2020-08-28 18:24:25 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = 2
+2020-08-28 18:24:25 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 18:24:26 INFO  Logs:13 - DB connection is successful
+2020-08-28 18:24:26 INFO  Logs:13 - Data is retrieved
+2020-08-28 18:24:26 INFO  Logs:13 - DB connection is closed
+2020-08-28 18:24:26 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 18:25:31 INFO  Logs:13 - ------- Started test -------
+2020-08-28 18:25:31 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 18:25:32 INFO  Logs:13 - DB connection is successful
+2020-08-28 18:25:32 INFO  Logs:13 - Executing Update statement:Update [WorldEvents].[dbo].[tblEvent] set EventName = 'Test' where EventID = 2
+2020-08-28 18:25:32 INFO  Logs:13 - Data is updated
+2020-08-28 18:25:32 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = 2
+2020-08-28 18:25:32 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 18:25:32 INFO  Logs:13 - DB connection is successful
+2020-08-28 18:25:32 INFO  Logs:13 - Data is retrieved
+2020-08-28 18:25:32 INFO  Logs:13 - DB connection is closed
+2020-08-28 18:25:32 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 18:26:42 INFO  Logs:13 - ------- Started test -------
+2020-08-28 18:26:42 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 18:26:42 INFO  Logs:13 - DB connection is successful
+2020-08-28 18:26:43 INFO  Logs:13 - Executing Update statement:Update [WorldEvents].[dbo].[tblEvent] set EventName = 'Test' where EventID = 2
+2020-08-28 18:26:43 INFO  Logs:13 - Data is updated
+2020-08-28 18:26:43 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 18:26:43 INFO  Logs:13 - DB connection is successful
+2020-08-28 18:26:43 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = 2
+2020-08-28 18:26:43 INFO  Logs:13 - Data is retrieved
+2020-08-28 18:26:43 INFO  Logs:13 - DB connection is closed
+2020-08-28 18:26:43 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 18:30:32 INFO  Logs:13 - ------- Started test -------
+2020-08-28 18:30:32 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 18:30:32 INFO  Logs:13 - DB connection is successful
+2020-08-28 18:30:32 INFO  Logs:13 - DB connection is closed
+2020-08-28 18:30:32 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 18:30:32 INFO  Logs:13 - ------- Started test -------
+2020-08-28 18:30:32 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 18:30:32 INFO  Logs:13 - DB connection is successful
+2020-08-28 18:30:32 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = 1
+2020-08-28 18:30:32 INFO  Logs:13 - Data is retrieved
+2020-08-28 18:30:32 INFO  Logs:13 - DB connection is closed
+2020-08-28 18:30:32 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 18:30:32 INFO  Logs:13 - ------- Started test -------
+2020-08-28 18:30:32 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 18:30:32 INFO  Logs:13 - DB connection is successful
+2020-08-28 18:30:32 INFO  Logs:13 - Executing Update statement:Update [WorldEvents].[dbo].[tblEvent] set EventName = 'Test' where EventID = 2
+2020-08-28 18:30:32 INFO  Logs:13 - Data is updated
+2020-08-28 18:30:32 INFO  Logs:13 - Establishing DB connection...
+2020-08-28 18:30:32 INFO  Logs:13 - DB connection is successful
+2020-08-28 18:30:32 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = 2
+2020-08-28 18:30:32 INFO  Logs:13 - Data is retrieved
+2020-08-28 18:30:32 INFO  Logs:13 - DB connection is closed
+2020-08-28 18:30:32 INFO  Logs:13 - ------- Finish test -------
