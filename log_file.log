@@ -1,0 +1,31 @@
+2020-08-28 16:06:16 INFO  Logs:13 - Connection to DB successful!
+2020-08-28 16:06:16 INFO  Logs:13 - Connection to DB successful!
+2020-08-28 16:12:33 INFO  Logs:13 - Connection to DB successful!
+2020-08-28 16:12:33 INFO  Logs:13 - Connection to DB successful!
+2020-08-28 16:17:37 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=30;
+2020-08-28 16:17:37 INFO  Logs:13 - Connection to DB successful!
+2020-08-28 16:17:37 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=30;
+2020-08-28 16:17:37 INFO  Logs:13 - Connection to DB successful!
+2020-08-28 16:18:30 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;
+2020-08-28 16:18:30 INFO  Logs:13 - Connection to DB successful!
+2020-08-28 16:18:30 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;
+2020-08-28 16:18:30 INFO  Logs:13 - Connection to DB successful!
+2020-08-28 16:24:24 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;
+2020-08-28 16:24:24 INFO  Logs:13 - Connection to DB successful!
+2020-08-28 16:24:24 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;
+2020-08-28 16:24:24 INFO  Logs:13 - Connection to DB successful!
+2020-08-28 16:24:59 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;
+2020-08-28 16:24:59 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 16:24:59 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;
+2020-08-28 16:24:59 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 16:24:59 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 16:27:09 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;
+2020-08-28 16:27:09 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 16:27:09 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;
+2020-08-28 16:27:09 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 16:27:09 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 16:46:20 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;
+2020-08-28 16:47:13 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 16:47:13 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;
+2020-08-28 16:47:13 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 16:47:13 INFO  Logs:13 - Connection to DB is closed!
