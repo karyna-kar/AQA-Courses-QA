@@ -29,3 +29,53 @@
 2020-08-28 16:47:13 INFO  Logs:13 - Try to connect to DB jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;
 2020-08-28 16:47:13 INFO  Logs:13 - Connection to DB is successful!
 2020-08-28 16:47:13 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 17:03:51 INFO  Logs:13 - Try to connect to DB...
+2020-08-28 17:03:51 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:03:51 INFO  Logs:13 - Try to connect to DB...
+2020-08-28 17:03:51 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:03:51 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 17:05:20 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:05:21 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:05:21 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:05:21 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:05:21 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 17:08:29 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:08:30 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:08:30 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:08:30 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:08:30 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 17:09:37 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:09:37 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:09:37 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:09:37 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:09:38 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 17:10:42 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:10:43 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:10:43 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:10:43 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:12:34 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:12:34 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:12:34 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:12:34 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:12:34 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:12:34 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 17:12:34 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:12:51 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:12:51 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:12:52 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:12:52 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:12:52 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:12:52 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 17:12:52 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 17:12:52 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:13:59 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:13:59 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:14:00 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:14:00 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 17:14:00 INFO  Logs:13 - ------- Finish test -------
+2020-08-28 17:14:00 INFO  Logs:13 - ------- Started test -------
+2020-08-28 17:14:00 INFO  Logs:13 - Try to establish DB connection...
+2020-08-28 17:14:00 INFO  Logs:13 - Connection to DB is successful!
+2020-08-28 17:14:00 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 17:14:00 INFO  Logs:13 - Connection to DB is closed!
+2020-08-28 17:14:00 INFO  Logs:13 - ------- Finish test -------

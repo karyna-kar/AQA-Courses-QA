@@ -19,7 +19,7 @@ public class JDBCConnection {
     private static Statement statement = null;
 
     public static Connection connectToDB()  {
-        Logs.info("Try to connect to DB...");
+        Logs.info("Try to establish DB connection...");
         try {
             connection = DriverManager.getConnection(connectionUrl);
             Logs.info("Connection to DB is successful!");
