@@ -198,3 +198,194 @@
 2020-08-28 18:30:32 INFO  Logs:13 - Data is retrieved
 2020-08-28 18:30:32 INFO  Logs:13 - DB connection is closed
 2020-08-28 18:30:32 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:15:06 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:15:06 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:15:06 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:15:06 INFO  Logs:13 - Executing Insert statement:INSERT INTO [WorldEvents].[dbo].[tblCountry]  (CountryID, CountryName, ContinentID) VALUES (44, 'Belarus', 3)
+2020-08-29 12:15:06 ERROR Logs:9 - Cannot insert explicit value for identity column in table 'tblCountry' when IDENTITY_INSERT is set to OFF.
+2020-08-29 12:15:06 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:15:06 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:15:06 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry] where EventID = 44
+2020-08-29 12:15:07 ERROR Logs:9 - Invalid column name 'EventID'.
+2020-08-29 12:15:07 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:15:07 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:16:46 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:16:46 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:16:46 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:16:46 INFO  Logs:13 - Executing Insert statement:INSERT INTO [WorldEvents].[dbo].[tblCountry]  (CountryName, ContinentID) VALUES ('Belarus', 3)
+2020-08-29 12:16:46 INFO  Logs:13 - Data is inserted
+2020-08-29 12:16:46 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:16:46 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:16:46 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry] where EventID = 44
+2020-08-29 12:16:46 ERROR Logs:9 - Invalid column name 'EventID'.
+2020-08-29 12:16:46 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:16:46 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:18:18 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:18:18 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:18:18 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:18:18 INFO  Logs:13 - Executing Insert statement:INSERT INTO [WorldEvents].[dbo].[tblCountry]  (CountryName, ContinentID) VALUES ('Belarus', 3)
+2020-08-29 12:18:18 INFO  Logs:13 - Data is inserted
+2020-08-29 12:18:18 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:18:18 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:18:18 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry]
+2020-08-29 12:18:18 INFO  Logs:13 - Data is retrieved
+2020-08-29 12:18:18 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:18:18 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:25:12 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:25:12 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:25:12 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:25:12 INFO  Logs:13 - Executing Insert statement:INSERT INTO [WorldEvents].[dbo].[tblCountry]  (CountryName, ContinentID) VALUES ('Belarus', 3)
+2020-08-29 12:25:12 INFO  Logs:13 - Data is inserted
+2020-08-29 12:25:12 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:25:12 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:25:12 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry]
+2020-08-29 12:25:12 INFO  Logs:13 - Data is retrieved
+2020-08-29 12:25:12 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:25:12 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:26:25 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:26:25 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:26:26 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:26:26 INFO  Logs:13 - Executing Delete statement:DELETE FROM [WorldEvents].[dbo].[tblCountry] WHERE  [CountryName] = 'Belarus'
+2020-08-29 12:26:26 INFO  Logs:13 - Data is deleted
+2020-08-29 12:26:26 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:26:26 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:26:26 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry] WHERE CountyName='Belarus'
+2020-08-29 12:26:26 ERROR Logs:9 - Invalid column name 'CountyName'.
+2020-08-29 12:26:26 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:26:26 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:27:05 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:27:05 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:27:05 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:27:05 INFO  Logs:13 - Executing Insert statement:INSERT INTO [WorldEvents].[dbo].[tblCountry]  (CountryName, ContinentID) VALUES ('Belarus', 3)
+2020-08-29 12:27:05 INFO  Logs:13 - Data is inserted
+2020-08-29 12:27:05 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:27:05 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:27:05 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry]
+2020-08-29 12:27:05 INFO  Logs:13 - Data is retrieved
+2020-08-29 12:27:05 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:27:05 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:27:20 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:27:20 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:27:20 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:27:20 INFO  Logs:13 - Executing Delete statement:DELETE FROM [WorldEvents].[dbo].[tblCountry] WHERE  [CountryName] = 'Belarus'
+2020-08-29 12:27:20 INFO  Logs:13 - Data is deleted
+2020-08-29 12:27:20 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:27:20 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:27:20 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry] WHERE [CountryName]='Belarus'
+2020-08-29 12:27:20 INFO  Logs:13 - Data is retrieved
+2020-08-29 12:27:20 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:27:20 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:28:35 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:28:35 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:28:36 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:28:36 INFO  Logs:13 - Executing Insert statement:INSERT INTO [WorldEvents].[dbo].[tblCountry]  (CountryName, ContinentID) VALUES ('Belarus', 3)
+2020-08-29 12:28:37 INFO  Logs:13 - Data is inserted
+2020-08-29 12:28:37 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:28:37 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:28:37 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry]
+2020-08-29 12:28:37 INFO  Logs:13 - Data is retrieved
+2020-08-29 12:28:37 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:28:37 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:28:42 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:28:42 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:28:43 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:28:43 INFO  Logs:13 - Executing Delete statement:DELETE FROM [WorldEvents].[dbo].[tblCountry] WHERE  [CountryName] = 'Belarus'
+2020-08-29 12:28:43 INFO  Logs:13 - Data is deleted
+2020-08-29 12:28:43 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:28:43 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:28:43 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry] WHERE [CountryName]='Belarus'
+2020-08-29 12:28:43 INFO  Logs:13 - Data is retrieved
+2020-08-29 12:28:43 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:28:43 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:31:42 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:31:42 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:31:43 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:31:43 INFO  Logs:13 - Executing Insert statement:INSERT INTO [WorldEvents].[dbo].[tblCountry]  (CountryName, ContinentID) VALUES ('Belarus', 3)
+2020-08-29 12:31:43 INFO  Logs:13 - Data is inserted
+2020-08-29 12:31:43 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:31:43 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:31:43 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry]
+2020-08-29 12:31:43 INFO  Logs:13 - Data is retrieved
+2020-08-29 12:31:43 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:31:43 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:31:48 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:31:48 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:31:49 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:31:49 INFO  Logs:13 - Executing Delete statement:DELETE FROM [WorldEvents].[dbo].[tblCountry] WHERE  [CountryName] = 'Belarus'
+2020-08-29 12:31:49 INFO  Logs:13 - Data is deleted
+2020-08-29 12:31:49 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:31:49 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:31:49 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry] WHERE [CountryName]='Belarus'
+2020-08-29 12:31:49 INFO  Logs:13 - Data is retrieved
+2020-08-29 12:31:49 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:31:49 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:32:10 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:32:10 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:32:11 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:32:11 INFO  Logs:13 - Executing Insert statement:INSERT INTO [WorldEvents].[dbo].[tblCountry]  (CountryName, ContinentID) VALUES ('Belarus', 3)
+2020-08-29 12:32:11 INFO  Logs:13 - Data is inserted
+2020-08-29 12:32:11 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:32:11 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:32:11 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry]
+2020-08-29 12:32:11 INFO  Logs:13 - Data is retrieved
+2020-08-29 12:32:11 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:32:11 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 12:32:11 INFO  Logs:13 - ------- Started test -------
+2020-08-29 12:32:11 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:32:11 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:32:11 INFO  Logs:13 - Executing Delete statement:DELETE FROM [WorldEvents].[dbo].[tblCountry] WHERE  [CountryName] = 'Belarus'
+2020-08-29 12:32:11 INFO  Logs:13 - Data is deleted
+2020-08-29 12:32:11 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 12:32:11 INFO  Logs:13 - DB connection is successful
+2020-08-29 12:32:11 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblCountry] WHERE [CountryName]='Belarus'
+2020-08-29 12:32:11 INFO  Logs:13 - Data is retrieved
+2020-08-29 12:32:11 INFO  Logs:13 - DB connection is closed
+2020-08-29 12:32:11 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 13:08:39 INFO  Logs:13 - ------- Started test -------
+2020-08-29 13:08:39 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 13:08:39 INFO  Logs:13 - DB connection is successful
+2020-08-29 13:08:39 ERROR Logs:9 - The index 1 is out of range.
+2020-08-29 13:08:39 INFO  Logs:13 - DB connection is closed
+2020-08-29 13:08:39 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 13:12:33 INFO  Logs:13 - ------- Started test -------
+2020-08-29 13:12:33 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 13:12:34 INFO  Logs:13 - DB connection is successful
+2020-08-29 13:12:34 INFO  Logs:13 - Calling SP:exec [dbo].[uspCountriesEurope] ?,?with input parameter countryID= 3
+2020-08-29 13:12:34 ERROR Logs:9 - The method execute() cannot take arguments on a PreparedStatement or CallableStatement.
+2020-08-29 13:12:34 INFO  Logs:13 - DB connection is closed
+2020-08-29 13:12:34 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 13:13:50 INFO  Logs:13 - ------- Started test -------
+2020-08-29 13:13:50 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 13:13:50 INFO  Logs:13 - DB connection is successful
+2020-08-29 13:13:50 INFO  Logs:13 - Calling SP:exec [dbo].[uspCountriesEurope] ?,? with input parameter countryID= 3
+2020-08-29 13:13:50 ERROR Logs:9 - The value is not set for the parameter number 2.
+2020-08-29 13:13:50 INFO  Logs:13 - DB connection is closed
+2020-08-29 13:13:50 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 13:14:09 INFO  Logs:13 - ------- Started test -------
+2020-08-29 13:14:09 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 13:14:09 INFO  Logs:13 - DB connection is successful
+2020-08-29 13:14:09 INFO  Logs:13 - Calling SP:exec [dbo].[uspCountriesEurope] ? with input parameter countryID= 3
+2020-08-29 13:14:09 ERROR Logs:9 - The formal parameter "@ContinentID" was not declared as an OUTPUT parameter, but the actual parameter passed in requested output.
+2020-08-29 13:14:09 INFO  Logs:13 - DB connection is closed
+2020-08-29 13:14:09 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 13:14:41 INFO  Logs:13 - ------- Started test -------
+2020-08-29 13:14:41 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 13:14:42 INFO  Logs:13 - DB connection is successful
+2020-08-29 13:14:42 INFO  Logs:13 - Calling SP:exec [dbo].[uspCountriesEurope] ?,? with input parameter countryID= 3
+2020-08-29 13:14:42 ERROR Logs:9 - The output parameter 1 was not registered for output.
+2020-08-29 13:14:42 INFO  Logs:13 - DB connection is closed
+2020-08-29 13:14:42 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 13:15:12 INFO  Logs:13 - ------- Started test -------
+2020-08-29 13:15:12 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 13:15:12 INFO  Logs:13 - DB connection is successful
+2020-08-29 13:15:12 INFO  Logs:13 - Calling SP:exec [dbo].[uspCountriesEurope] ?,? with input parameter countryID= 3
+2020-08-29 13:15:12 INFO  Logs:13 - The Stored Procedure is called
+2020-08-29 13:15:12 INFO  Logs:13 - DB connection is closed
+2020-08-29 13:15:12 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 13:16:08 INFO  Logs:13 - ------- Started test -------
+2020-08-29 13:16:08 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 13:16:09 INFO  Logs:13 - DB connection is successful
+2020-08-29 13:16:09 INFO  Logs:13 - Calling SP:exec [dbo].[uspCountriesEurope] ?,? with input parameter countryID= 10
+2020-08-29 13:16:09 INFO  Logs:13 - The Stored Procedure is called
+2020-08-29 13:16:09 INFO  Logs:13 - DB connection is closed
+2020-08-29 13:16:09 INFO  Logs:13 - ------- Finish test -------

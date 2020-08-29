@@ -35,12 +35,30 @@ public class TestQueries extends TestsSetup {
 
     @Test //(dependsOnMethods = {"UpdateEventNameTest"})
     public void InsertCountryTest() throws SQLException {
-        String ins_query = "INSERT INTO [WorldEvents].[dbo].[tblCountry]  (CountryID, CountryName, ContinentID) VALUES (45, 'Belarus', 3)";
-        JDBCConnection.updateInDB(ins_query);
+        String ins_query = "INSERT INTO [WorldEvents].[dbo].[tblCountry]  (CountryName, ContinentID) VALUES ('Belarus', 3)";
+        JDBCConnection.InsertIntoDB(ins_query);
 
-        String sel_query = "SELECT * FROM [WorldEvents].[dbo].[tblCountry] where EventID = 45";
+        String sel_query = "SELECT * FROM [WorldEvents].[dbo].[tblCountry]";
         ResultSet resultSet = JDBCConnection.selectFromDB(sel_query);
-        resultSet.first();
+        resultSet.last();
         Assert.assertEquals(resultSet.getString("CountryName"), "Belarus");
+    }
+
+    @Test (dependsOnMethods = {"InsertCountryTest"})
+    public void DeleteCountryTest() throws SQLException {
+        String ins_query = "DELETE FROM [WorldEvents].[dbo].[tblCountry] WHERE  [CountryName] = 'Belarus'";
+        JDBCConnection.DeleteFromDB(ins_query);
+
+        String sel_query = "SELECT * FROM [WorldEvents].[dbo].[tblCountry] WHERE [CountryName]='Belarus'";
+        ResultSet resultSet = JDBCConnection.selectFromDB(sel_query);
+        resultSet.last();
+        Assert.assertFalse(resultSet.first());
+    }
+
+    @Test //(dependsOnMethods = {"InsertCountryTest"})
+    public void CallStoredProcedureTest() {
+        String preparedSql = "exec [dbo].[uspCountriesEurope] ?,?";
+        int result = JDBCConnection.CallSP(preparedSql, 3);
+        Assert.assertNotEquals(result, 0);
     }
 }

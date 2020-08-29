@@ -17,6 +17,7 @@ public class JDBCConnection {
     private static Connection connection = null;
     private static ResultSet result = null;
     private static Statement statement = null;
+    private static CallableStatement callstm = null;
 
     public static Connection connectToDB()  {
         Logs.info("Establishing DB connection...");
@@ -65,5 +66,47 @@ public class JDBCConnection {
         } catch (SQLException e) {
             Logs.error(e.getMessage());
         }
+    }
+
+    public static void InsertIntoDB(String query) {
+        try {
+            statement = connectToDB().createStatement();
+            Logs.info("Executing Insert statement:" + query);
+            statement.executeUpdate(query);
+            Logs.info("Data is inserted");
+        } catch (SQLException e) {
+            Logs.error(e.getMessage());
+        }
+    }
+
+    public static void DeleteFromDB(String query) {
+        try {
+            statement = connectToDB().createStatement();
+            Logs.info("Executing Delete statement:" + query);
+            statement.executeUpdate(query);
+            Logs.info("Data is deleted");
+        } catch (SQLException e) {
+            Logs.error(e.getMessage());
+        }
+    }
+
+    public static Integer CallSP(String query, int countryID) {
+        int counter=0;
+        try {
+            callstm = connectToDB().prepareCall(query);
+            //add input parameter
+            callstm.setInt(1, countryID);
+            Logs.info("Calling SP:" + query + " with input parameter countryID= "+ countryID);
+            //set output parameter
+            callstm.registerOutParameter(2, Types.INTEGER);
+            //execute sp
+            callstm.execute();
+            //get value of output parameter
+            counter = callstm.getInt(2);
+            Logs.info("The Stored Procedure is called");
+        } catch (SQLException e) {
+            Logs.error(e.getMessage());
+        }
+        return counter;
     }
 }
