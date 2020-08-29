@@ -17,6 +17,7 @@ public class JDBCConnection {
     private static Connection connection = null;
     private static ResultSet result = null;
     private static Statement statement = null;
+    private static PreparedStatement prstaement = null;
     private static CallableStatement callstm = null;
 
     public static Connection connectToDB()  {
@@ -57,11 +58,27 @@ public class JDBCConnection {
         return result;
     }
 
-    public static void updateInDB(String query) {
+    public static ResultSet selectFromDBWithParameters(String query, int EventID) {
         try {
-            statement = connectToDB().createStatement();
+           // prstaement = connectToDB().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            prstaement= connectToDB().prepareStatement(query, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            prstaement.setInt(1, EventID);
+            Logs.info("Executing Select statement:" + query + "with parameter EventID = "+EventID);
+            result = prstaement.executeQuery();
+            Logs.info("Data is retrieved");
+        } catch (SQLException e) {
+            Logs.error(e.getMessage());
+        }
+        return result;
+    }
+
+    public static void updateInDB(String query, int eventID) {
+        try {
+            prstaement = connectToDB().prepareStatement(query);
+            //statement = connectToDB().createStatement();
+            prstaement.setInt(1, eventID);
             Logs.info("Executing Update statement:" + query);
-            statement.executeUpdate(query);
+            prstaement.executeUpdate();
             Logs.info("Data is updated");
         } catch (SQLException e) {
             Logs.error(e.getMessage());
@@ -90,7 +107,7 @@ public class JDBCConnection {
         }
     }
 
-    public static Integer CallSP(String query, int countryID) {
+    public static Integer CallSPCountriesEurope(String query, int countryID) {
         int counter=0;
         try {
             callstm = connectToDB().prepareCall(query);

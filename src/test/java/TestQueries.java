@@ -23,17 +23,27 @@ public class TestQueries extends TestsSetup {
     }
 
     @Test (dependsOnMethods = {"SelectEventNameTest"})
-    public void UpdateEventNameTest() throws SQLException {
-        String upd_query = "Update [WorldEvents].[dbo].[tblEvent] set EventName = 'Test' where EventID = 2";
-        JDBCConnection.updateInDB(upd_query);
+    public void SelectJoinTest() throws SQLException {
+        String query = "Select EventID, EventName, EventDetails, EventDate, CountryName FROM [dbo].[tblEvent] JOIN [dbo].[tblCountry] ON [tblEvent].CountryID = [tblCountry].CountryID WHERE EventID=5";
+        ResultSet resultSet = JDBCConnection.selectFromDB(query);
+        resultSet.first();
+        Assert.assertEquals(resultSet.getString("CountryName"), "United Kingdom");
+    }
 
-        String sel_query = "SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = 2";
-        ResultSet resultSet = JDBCConnection.selectFromDB(sel_query);
+    @Test (dependsOnMethods = {"SelectJoinTest"})
+    public void UpdateEventNameTest() throws SQLException {
+        int EventID = 2;
+
+        String upd_query = "Update [WorldEvents].[dbo].[tblEvent] set EventName = 'Test' where EventID = ?";
+        JDBCConnection.updateInDB(upd_query, EventID);
+
+        String sel_query = "SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = ?";
+        ResultSet resultSet = JDBCConnection.selectFromDBWithParameters(sel_query, EventID);
         resultSet.first();
         Assert.assertEquals(resultSet.getString("EventName"), "Test");
     }
 
-    @Test //(dependsOnMethods = {"UpdateEventNameTest"})
+    @Test (dependsOnMethods = {"UpdateEventNameTest"})
     public void InsertCountryTest() throws SQLException {
         String ins_query = "INSERT INTO [WorldEvents].[dbo].[tblCountry]  (CountryName, ContinentID) VALUES ('Belarus', 3)";
         JDBCConnection.InsertIntoDB(ins_query);
@@ -55,10 +65,10 @@ public class TestQueries extends TestsSetup {
         Assert.assertFalse(resultSet.first());
     }
 
-    @Test //(dependsOnMethods = {"InsertCountryTest"})
+    @Test (dependsOnMethods = {"DeleteCountryTest"})
     public void CallStoredProcedureTest() {
         String preparedSql = "exec [dbo].[uspCountriesEurope] ?,?";
-        int result = JDBCConnection.CallSP(preparedSql, 3);
+        int result = JDBCConnection.CallSPCountriesEurope(preparedSql, 3);
         Assert.assertNotEquals(result, 0);
     }
 }
