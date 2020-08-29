@@ -75,7 +75,6 @@ public class JDBCConnection {
     public static void updateInDB(String query, int eventID) {
         try {
             prstaement = connectToDB().prepareStatement(query);
-            //statement = connectToDB().createStatement();
             prstaement.setInt(1, eventID);
             Logs.info("Executing Update statement:" + query);
             prstaement.executeUpdate();

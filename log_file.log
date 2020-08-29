@@ -541,3 +541,14 @@
 2020-08-29 13:49:00 INFO  Logs:13 - The Stored Procedure is called
 2020-08-29 13:49:00 INFO  Logs:13 - DB connection is closed
 2020-08-29 13:49:00 INFO  Logs:13 - ------- Finish test -------
+2020-08-29 13:55:11 INFO  Logs:13 - ---- Start test ----
+2020-08-29 13:55:11 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 13:55:12 INFO  Logs:13 - DB connection is successful
+2020-08-29 13:55:12 INFO  Logs:13 - Executing Update statement:Update [WorldEvents].[dbo].[tblEvent] set EventName = 'Test' where EventID = ?
+2020-08-29 13:55:12 INFO  Logs:13 - Data is updated
+2020-08-29 13:55:12 INFO  Logs:13 - Establishing DB connection...
+2020-08-29 13:55:12 INFO  Logs:13 - DB connection is successful
+2020-08-29 13:55:12 INFO  Logs:13 - Executing Select statement:SELECT * FROM [WorldEvents].[dbo].[tblEvent] where EventID = ?with parameter EventID = 2
+2020-08-29 13:55:12 INFO  Logs:13 - Data is retrieved
+2020-08-29 13:55:12 INFO  Logs:13 - DB connection is closed
+2020-08-29 13:55:12 INFO  Logs:13 - ---- Finish test ---
