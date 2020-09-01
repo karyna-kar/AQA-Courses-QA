@@ -552,3 +552,17 @@
 2020-08-29 13:55:12 INFO  Logs:13 - Data is retrieved
 2020-08-29 13:55:12 INFO  Logs:13 - DB connection is closed
 2020-08-29 13:55:12 INFO  Logs:13 - ---- Finish test ---
+2020-09-01 21:52:13 INFO  Logs:13 - ---- Start test ----
+2020-09-01 21:52:13 INFO  Logs:13 - Establishing DB connection...
+2020-09-01 21:53:13 INFO  Logs:13 - DB connection is failed
+2020-09-01 21:53:13 ERROR Logs:9 - Не удалось установить соединение TCP/IP к серверу 172.31.0.150 по порту 1435. Ошибка: "connect timed out. Проверьте свойства соединения. Убедитесь, что на сервере запущен экземпляр SQL Server и он принимает TCP/IP-соединения по порту. Убедитесь, что TCP-соединения по этому порту не блокируются брандмауэром.".
+2020-09-01 21:53:13 INFO  Logs:13 - ---- Finish test ---
+2020-09-01 21:53:13 INFO  Logs:13 - ---- Start test ----
+2020-09-01 21:53:13 INFO  Logs:13 - Establishing DB connection...
+2020-09-01 21:53:42 INFO  Logs:13 - ---- Start test ----
+2020-09-01 21:53:42 INFO  Logs:13 - Establishing DB connection...
+2020-09-01 21:54:42 INFO  Logs:13 - DB connection is failed
+2020-09-01 21:54:42 ERROR Logs:9 - Не удалось установить соединение TCP/IP к серверу 172.31.0.150 по порту 1435. Ошибка: "connect timed out. Проверьте свойства соединения. Убедитесь, что на сервере запущен экземпляр SQL Server и он принимает TCP/IP-соединения по порту. Убедитесь, что TCP-соединения по этому порту не блокируются брандмауэром.".
+2020-09-01 21:54:42 INFO  Logs:13 - ---- Finish test ---
+2020-09-01 21:55:34 INFO  Logs:13 - ---- Start test ----
+2020-09-01 21:55:34 INFO  Logs:13 - Establishing DB connection...jdbc:sqlserver://172.31.0.150:1435;database=WorldEvents;user=Karina_test;password=123;encrypt=true;trustServerCertificate=true;loginTimeout=60;

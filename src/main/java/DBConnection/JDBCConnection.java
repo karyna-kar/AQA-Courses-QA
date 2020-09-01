@@ -1,6 +1,7 @@
 package DBConnection;
 
 import utils.Logs;
+import utils.Property;
 
 import java.sql.*;
 
@@ -8,8 +9,8 @@ public class JDBCConnection {
     private static final String connectionUrl =
             "jdbc:sqlserver://172.31.0.150:1435;"
                     + "database=WorldEvents;"
-                    + "user=Karina_test;"
-                    + "password=123;"
+                    + "user="+ Property.getProperty("db.login") +";"
+                    + "password="+Property.getProperty("db.password") +";"
                     +"encrypt=true;"
                     + "trustServerCertificate=true;"
                     + "loginTimeout=60;";
@@ -21,7 +22,7 @@ public class JDBCConnection {
     private static CallableStatement callstm = null;
 
     public static Connection connectToDB()  {
-        Logs.info("Establishing DB connection...");
+        Logs.info("Establishing DB connection..." + connectionUrl);
         try {
             connection = DriverManager.getConnection(connectionUrl);
             Logs.info("DB connection is successful");
