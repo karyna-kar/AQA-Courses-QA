@@ -22,7 +22,7 @@ public class JDBCConnection {
     private static CallableStatement callstm = null;
 
     public static Connection connectToDB()  {
-        Logs.info("Establishing DB connection..." + connectionUrl);
+        Logs.info("Establishing DB connection...");
         try {
             connection = DriverManager.getConnection(connectionUrl);
             Logs.info("DB connection is successful");

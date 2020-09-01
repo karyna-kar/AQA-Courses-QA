@@ -10,20 +10,11 @@ import java.util.Properties;
 public class Property {
     public static String getProperty(String propKey)  {
         FileInputStream fis;
-        Properties property = new Properties();
         String prop = "";
-
         try {
+            Properties property = new Properties();
             fis = new FileInputStream("src/main/resources/login.properties");
             property.load(fis);
-
-         /*   String login = property.getProperty("db.login");
-            String password = property.getProperty("db.password");
-
-            System.out.println(
-                    ", LOGIN: " + login
-                    + ", PASSWORD: " + password);*/
-
             prop = property.getProperty(propKey);
 
         } catch (FileNotFoundException e) {
