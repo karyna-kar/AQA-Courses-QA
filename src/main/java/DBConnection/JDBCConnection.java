@@ -9,9 +9,9 @@ public class JDBCConnection {
     private static final String connectionUrl =
             "jdbc:sqlserver://172.31.0.150:1435;"
                     + "database=WorldEvents;"
-                    + "user="+ Property.getProperty("db.login") +";"
-                    + "password="+Property.getProperty("db.password") +";"
-                    +"encrypt=true;"
+                    + "user=" + Property.getProperty("db.login") + ";"
+                    + "password=" + Property.getProperty("db.password") + ";"
+                    + "encrypt=true;"
                     + "trustServerCertificate=true;"
                     + "loginTimeout=60;";
 
@@ -21,13 +21,12 @@ public class JDBCConnection {
     private static PreparedStatement prstaement = null;
     private static CallableStatement callstm = null;
 
-    public static Connection connectToDB()  {
+    public static Connection connectToDB() {
         Logs.info("Establishing DB connection...");
         try {
             connection = DriverManager.getConnection(connectionUrl);
             Logs.info("DB connection is successful");
-        }
-        catch(SQLException e){
+        } catch (SQLException e) {
             Logs.info("DB connection is failed");
             Logs.error(e.getMessage());
         }
@@ -35,15 +34,48 @@ public class JDBCConnection {
     }
 
     public static void closeConnection() {
-        if (connection != null)
-        { try {
-            connection.close();
-            Logs.info("DB connection is closed");
+        if (result != null) {
+            try {
+                result.close();
+                Logs.info("ResultSet is closed");
+            } catch (SQLException e) {
+                Logs.error(e.getMessage());
+            }
         }
-        catch(SQLException e)
-        {
-            Logs.error(e.getMessage());
+        if (statement != null) {
+            try {
+                statement.close();
+                Logs.info("Statement is closed");
+            } catch (SQLException e) {
+                Logs.error(e.getMessage());
+            }
         }
+
+        if (prstaement != null) {
+            try {
+                prstaement.close();
+                Logs.info("Prepared statement is closed");
+            } catch (SQLException e) {
+                Logs.error(e.getMessage());
+            }
+        }
+
+        if (callstm != null) {
+            try {
+                callstm.close();
+                Logs.info("Callable Statement is closed");
+            } catch (SQLException e) {
+                Logs.error(e.getMessage());
+            }
+        }
+
+        if (connection != null) {
+            try {
+                connection.close();
+                Logs.info("DB connection is closed");
+            } catch (SQLException e) {
+                Logs.error(e.getMessage());
+            }
         }
     }
 
@@ -61,10 +93,9 @@ public class JDBCConnection {
 
     public static ResultSet selectFromDBWithParameters(String query, int EventID) {
         try {
-           // prstaement = connectToDB().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            prstaement= connectToDB().prepareStatement(query, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            prstaement = connectToDB().prepareStatement(query, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
             prstaement.setInt(1, EventID);
-            Logs.info("Executing Select statement:" + query + "with parameter EventID = "+EventID);
+            Logs.info("Executing Select statement:" + query + "with parameter EventID = " + EventID);
             result = prstaement.executeQuery();
             Logs.info("Data is retrieved");
         } catch (SQLException e) {
@@ -108,12 +139,12 @@ public class JDBCConnection {
     }
 
     public static Integer CallSPCountriesEurope(String query, int countryID) {
-        int counter=0;
+        int counter = 0;
         try {
             callstm = connectToDB().prepareCall(query);
             //add input parameter
             callstm.setInt(1, countryID);
-            Logs.info("Calling SP:" + query + " with input parameter countryID= "+ countryID);
+            Logs.info("Calling SP:" + query + " with input parameter countryID= " + countryID);
             //set output parameter
             callstm.registerOutParameter(2, Types.INTEGER);
             //execute sp

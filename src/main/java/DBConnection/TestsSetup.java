@@ -6,14 +6,12 @@ import utils.Logs;
 public class TestsSetup {
 
     @BeforeMethod
-    public void startTest()
-    {
+    public void startTest() {
         Logs.info("---- Start test ----");
     }
 
     @AfterMethod
-    public void finishTest()
-    {
+    public void finishTest() {
         JDBCConnection.closeConnection();
         Logs.info("---- Finish test ---");
     }
