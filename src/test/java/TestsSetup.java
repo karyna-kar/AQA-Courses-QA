@@ -1,4 +1,4 @@
-package DBConnection;
+import DBConnection.JDBCConnection;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.Logs;

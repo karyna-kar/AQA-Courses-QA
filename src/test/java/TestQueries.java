@@ -1,8 +1,6 @@
 import DBConnection.JDBCConnection;
-import DBConnection.TestsSetup;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utils.Logs;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
