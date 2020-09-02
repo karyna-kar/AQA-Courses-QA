@@ -12,4 +12,6 @@ public class Logs {
     public static void info(String message) {
         log.info(message);
     }
+
+
 }

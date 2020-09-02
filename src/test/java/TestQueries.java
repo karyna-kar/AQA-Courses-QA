@@ -29,7 +29,7 @@ public class TestQueries extends TestsSetup {
         Assert.assertEquals(resultSet.getString("CountryName"), "United Kingdom");
     }
 
-    @Test//(dependsOnMethods = {"SelectJoinTest"})
+    @Test(dependsOnMethods = {"SelectJoinTest"})
     public void UpdateEventNameTest() throws SQLException {
         int EventID = 2;
 
